@@ -20,4 +20,4 @@ jobs:
       uses: Source-Code-Inspection-inc/CodeWeTrust-GitHubAction-ExecutiveReport@v0.2
       with:
         path: SourceCodeToAnalyze
-        licenseKey: 2E5CD8-32D0EE-713CA7-C4BFD9-EF5428-V3
+        licenseKey: ${{ secrets.CWT_LICENSE_KEY }}
