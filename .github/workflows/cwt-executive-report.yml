@@ -13,17 +13,15 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        path: SourceCodeToAnalyze
         fetch-depth: 0 # avoid shallow clone so that Git history analysis works
 
     - name: CodeWeTrust Executive Report Generator
       uses: Source-Code-Inspection-inc/CodeWeTrust-GitHubAction-ExecutiveReport@v0.13
       with:
-        path: SourceCodeToAnalyze
         licenseKey: ${{ secrets.CWT_LICENSE_KEY }}
 
     - name: Upload Report
       uses: actions/upload-artifact@v2
       with:
         name: Reports
-        path: SourceCodeToAnalyze/ExecutiveReport.pptx
+        path: ExecutiveReport.pptx
