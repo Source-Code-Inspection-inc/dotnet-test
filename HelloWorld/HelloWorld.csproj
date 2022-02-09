@@ -9,4 +9,10 @@
     <PackageReference Include="humanizer" Version="2.11.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="..\.github\workflows\cwt-executive-report.yml">
+      <Link>cwt-executive-report.yml</Link>
+    </Content>
+  </ItemGroup>
+
 </Project>
