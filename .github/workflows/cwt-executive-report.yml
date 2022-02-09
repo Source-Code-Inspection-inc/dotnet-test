@@ -1,0 +1,23 @@
+name: Run CodeWeTrust Executive Report
+
+on: workflow_dispatch
+
+jobs:
+  cwt-analysis:
+    runs-on: ubuntu-20.04
+
+    timeout-minutes: 55
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        path: SourceCodeToAnalyze
+        fetch-depth: 0 # avoid shallow clone so that Git history analysis works
+
+    - name: CodeWeTrust Executive Report Generator
+      uses: Source-Code-Inspection-inc/CodeWeTrust-GitHubAction-ExecutiveReport@v0.1
+      with:
+        path: SourceCodeToAnalyze
+        licenseKey: 2E5CD8-32D0EE-713CA7-C4BFD9-EF5428-V3
