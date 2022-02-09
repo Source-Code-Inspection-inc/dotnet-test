@@ -23,7 +23,7 @@ jobs:
         licenseKey: ${{ secrets.CWT_LICENSE_KEY }}
 
     - name: Upload Report
-    - uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
         name: Reports
         path: SourceCodeToAnalyze/work_res/
