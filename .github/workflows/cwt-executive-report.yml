@@ -16,7 +16,7 @@ jobs:
         fetch-depth: 0 # avoid shallow clone so that Git history analysis works
 
     - name: CodeWeTrust Executive Report Generator
-      uses: Source-Code-Inspection-inc/CodeWeTrust-GitHubAction-ExecutiveReport@v0.13
+      uses: Source-Code-Inspection-inc/CodeWeTrust-GitHubAction-ExecutiveReport@v0.20
       with:
         licenseKey: ${{ secrets.CWT_LICENSE_KEY }}
 
